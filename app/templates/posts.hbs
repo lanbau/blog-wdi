@@ -1,0 +1,11 @@
+{{model}}
+{{#each model as |post|}}
+  {{post.title}} - {{post.body}}<br>
+{{/each}}
+{{outlet}}
+
+<h1>Create New</h1>
+<!-- emberjs input helper -->
+{{input value=title}}
+{{input value=body}}
+<button {{action 'createPost'}}>Create</button>
